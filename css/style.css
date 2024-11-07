@@ -61,6 +61,8 @@ body {
 header {
     background-color: #333;
     padding: 1.5rem 0;
+    position: fixed;
+    width: 100vw;
 }
 .logo{
     justify-content: center;
@@ -223,11 +225,54 @@ footer a {
 footer{
 text-align: center;
 }
+.mobile{
+    display: block;
+}
+.desktop{
+    display:none
+}
+ul.mobile{
+    list-style-type: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-left: 0; 
+    position: fixed;
+    top: 125px;
+    height: 100vw;
+    width: 100vw;
+    background-color: #666;
+    left: -100%;
+}
+ul.mobile a{
+    color: #fff;
+
+}
+header input{
+    display: none;
+}
+header label{
+    color: #fff;
+    font-size: 1.5rem;
+}
+#main-header .container{
+    display: flex;
+}
+#click:checked ~ ul.mobile{
+left: 0;
+}
+#click:checked ~ label i::before{
+    content: "\f00d"
+}
+#click:not(:checked) ~ ul.mobile{
+    left: -100%;
+    }
 
 @media screen and (min-width:1000px) {    
     header {
         background-color: red;
         padding: 1.5rem 0;
+        position: absolute;
     }
     .content {       
         padding: 0;
@@ -260,5 +305,11 @@ text-align: center;
     }
     footer p{
         text-align: left;
+        }
+        .mobile{
+            display: none;
+        }
+        .desktop{
+            display:block;
         }
 }
