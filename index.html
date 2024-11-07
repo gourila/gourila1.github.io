@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <div  class="header container">
+
+            <div class="header-up">
+                <div id="logo">
+                    <a href="#">
+                    <img class="inject-me" src="img/logo.svg" alt="">
+                </div>
+            
+                <nav id="main-nav">
+                
+                    <ul>
+                        <li><a href="About">About</a></li>
+                        <li class="black"><a href="Work">Work</a></li>
+                        <li><a href="Contact">Contact</a></li>
+                            
+                    </ul>
+                
+                </nav>
+            </div> <!--fin du header-up   -->
+            <div class="titre"><h1>PORTEFOLIO</h1></div>
+         </div> <!--fin du header   -->
+    </header>
+    <main>
+        <div  class="main container wrapper">
+            <img src="img/photos-1.jpg" alt="">
+            <img src="img/photos-2.jpg" alt="">
+            <img src="img/photos-3.jpg" alt="">
+            <img src="img/photos-4.jpg" alt="">
+            <img src="img/photos_5.jpg" alt="">
+            <img src="img/photos-6.jpg" alt="">
+        </div>
+    </main>
+
+    <footer>
+        <div  class="footer container">
+            <p>  &#169; Design & code 2013.All rights reserved</p>
+        </div>
+
+    </footer>
+   
+
+    <script src="js/svg-injector.min (2).js"></script>
+    
+    <script>
+        // Elements to inject
+        var mySVGsToInject = document.querySelectorAll('img.inject-me');
+    
+        // Do the injection
+        SVGInjector(mySVGsToInject);
+    </script>
+    
+
+   
+</body>
+</html>
